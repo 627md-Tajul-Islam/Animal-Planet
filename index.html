@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Animal Planet </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <div id="main">
+  <div class="grid">
+
+ <div class="gridline"> </div>
+ <div class="gridline"> </div>
+ <div class="gridline"> </div>
+ <div class="gridline"> </div>
+ <div class="gridline"> </div>
+ <div class="gridline"> </div>
+ <div class="gridline"> </div>
+ <div class="gridline"> </div>
+ <div class="gridline"> </div>
+ <div class="gridline"> </div>
+ <div class="gridline"> </div>
+</div>
+<div id="bgtext">
+      TAJUL <br> ISLAM
+</div>
+
+<div id="logo">
+  <img src="logo.png" alt="">
+</div>
+
+<div id="menu">
+ <ul>
+     <li>HOME </li>
+     <li>ABOUT </li>
+     <li>PROJECT </li>
+     <li>CONTACT </li>
+ </ul>
+</div>
+
+<div id="imgs">
+   <img src="1.png" alt="" id="img1">
+   <img src="2.png" alt="" id="img2">
+   <img src="3.png" alt="" id="img3">
+   <img src="4.png" alt="" id="img4">
+</div>
+    </div>
+
+    <script>
+  var object1 = $('#img2');
+  var object2 = $('#img4');
+
+ var layer = $('#main');
+
+ layer.mousemove(function(e){
+  var valueX  = (e.pageX * -1 / 20);
+  var valueY  = (e.pageY * -1 / 20);
+  object1.css({
+      'transform':'translate(-50%,-50%) translate3d('+valueX+'px,'+valueY+'px,0)'
+  });
+ });
+
+ layer.mousemove(function(e){
+  var valueX  = (e.pageX * -1 / 50);
+  var valueY  = (e.pageY * -1 / 50);
+  object2.css({
+      'transform':'translate(-50%,-50%) translate3d('+valueX+'px,'+valueY+'px,0)'
+  });
+ });
+
+
+    </script>
+
+
+
+</body>
+</html>
